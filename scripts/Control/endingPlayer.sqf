@@ -12,14 +12,12 @@ sleep 5;
 _officer directSay "TOUR_welcomeback";
 sleep 5;
 
-if ("TOUR_objHVT" call A2S_taskState != "SUCCEEDED") then
+if ("TOUR_objHVT" call BIS_fnc_taskState != "SUCCEEDED") then
 {
 	if (isServer) then
 	{
-		["TOUR_objHVT", "failed"] call A2S_setTaskState;
-		"TOUR_objHVT" call A2S_taskCommit;
-		sleep 1;
-		"TOUR_objHVT" call A2S_taskHint;		
+		sleep 2;
+		["TOUR_objHVT", "failed", true] call BIS_fnc_taskSetState;	
 	};
 	_player directSay "TOUR_playernotgood";
 	sleep 5;
@@ -33,18 +31,15 @@ if ("TOUR_objHVT" call A2S_taskState != "SUCCEEDED") then
 
 sleep 3;
 
-if ("TOUR_objCiv" call A2S_taskState != "failed") then
+if ("TOUR_objCiv" call BIS_fnc_taskState != "failed") then
 {
-	["TOUR_objCiv", "SUCCEEDED"] call A2S_setTaskState;
-	"TOUR_objCiv" call A2S_taskCommit;
 	sleep 2;
-	"TOUR_objCiv" call A2S_taskHint;
-	sleep 3;
+	["TOUR_objCiv", "SUCCEEDED", true] call BIS_fnc_taskSetState;
 };
 
-if ("TOUR_objHVT" call A2S_taskState == "SUCCEEDED") then
+if ("TOUR_objHVT" call BIS_fnc_taskState == "SUCCEEDED") then
 {
-	if ("TOUR_objCiv" call A2S_taskState == "SUCCEEDED") then
+	if ("TOUR_objCiv" call BIS_fnc_taskState == "SUCCEEDED") then
 	{
 		"complete" remoteExecCall ["BIS_fnc_endMissionServer", 0, true];
 	}else

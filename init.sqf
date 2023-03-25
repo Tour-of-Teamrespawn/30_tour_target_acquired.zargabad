@@ -8,9 +8,6 @@ waitUntil {scriptDone _d};
 _p = execVM "params.sqf";
 waitUntil {scriptDone _p};
 
-_a = TOUR_Core execVM "a2s_multitask.sqf";
-waitUntil {scriptDone _a};
-
 enableRadio false;
 {
 	_x setVariable ["BIS_noCoreConversations",true];
@@ -46,13 +43,12 @@ if (isServer) then
 	
 };
 
-execVM "scripts\general\intro.sqf";
+//execVM "scripts\general\intro.sqf";
 
 execVM "scripts\general\table.sqf";
 
 if (!isDedicated) then
 {
-	[] call A2S_tasksSync;
 
 	player playaction "stand";
 

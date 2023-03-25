@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=470;
+		nextID=472;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4913.5942,55.58987,6165.6641};
-		dir[]={0.52362388,-0.45264167,0.72176462};
-		up[]={0.26580188,0.89169097,0.36638179};
-		aside[]={0.80943,2.1583401e-007,-0.58722353};
+		pos[]={4517.6787,45.855389,4944.8105};
+		dir[]={-0.43728474,-0.35967058,-0.82427841};
+		up[]={-0.16855696,0.93308294,-0.31772867};
+		aside[]={-0.88339859,1.8780702e-007,0.46864846};
 	};
 };
 binarizationWanted=0;
-sourceName="30_tour_target_acquired_V2_mods";
+sourceName="30_tour_target_acquired";
 addons[]=
 {
 	"A3_Ui_F",
@@ -70,13 +70,14 @@ addons[]=
 	"A3_Structures_F_EPA_Mil_Scrapyard",
 	"ace_cargo",
 	"A3_Structures_F_Civ_Camping",
-	"ace_dragging"
+	"ace_dragging",
+	"CUP_Misc_e_Config"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=35;
+		items=36;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -318,6 +319,11 @@ class AddonsMetaData
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
+		class Item35
+		{
+			className="CUP_Misc_e_Config";
+			name="CUP_Misc_e_Config";
+		};
 	};
 };
 dlcs[]=
@@ -332,6 +338,10 @@ dlcs[]=
 	"Orange"
 };
 randomSeed=2763782;
+class ScenarioData
+{
+	author="Mr.Ben";
+};
 class CustomAttributes
 {
 	class Category0
@@ -380,7 +390,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=254;
+		items=256;
 		class Item0
 		{
 			dataType="Marker";
@@ -472,7 +482,7 @@ class Mission
 					flags=6;
 					class Attributes
 					{
-						init="call{removeAllWeapons this; this setCaptive true; this allowFleeing 0;  _unit setVariable [""lambs_danger_disableAI"", true];}";
+						init="removeAllWeapons this; this setCaptive true; this allowFleeing 0; this setVariable [""lambs_danger_disableAI"", true];";
 						name="TOUR_Warlord";
 					};
 					id=289;
@@ -6653,7 +6663,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4971.9321,29.664938,6252.9556};
-				angles[]={6.2806959,5.5195389,0.0075011365};
+				angles[]={6.2806959,2.4069414,0.0075011365};
 			};
 			side="Empty";
 			flags=4;
@@ -6702,7 +6712,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4971.7695,29.535383,6254.0454};
+				position[]={4971.9253,29.536287,6253.9399};
 				angles[]={6.2806959,2.8364151,0.0075011365};
 			};
 			side="Empty";
@@ -8642,6 +8652,38 @@ class Mission
 				};
 				nAttributes=3;
 			};
+		};
+		class Item254
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4973.4985,31.042131,6255.9272};
+				angles[]={0,1.9261802,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				name="asdf";
+			};
+			id=470;
+			type="Map_for_briefing_EP1";
+			atlOffset=0.9499073;
+		};
+		class Item255
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4973.562,30.264484,6255.9077};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=471;
+			type="Land_Net_Fence_pole_F";
 		};
 	};
 };

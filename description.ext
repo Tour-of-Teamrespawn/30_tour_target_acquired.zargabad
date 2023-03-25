@@ -160,6 +160,27 @@ class CfgRadio
 		sound[] = {};
 		title = "Excellent! Hopefully we can... erm... extract... some information from him before he is handed over to the Takistani police, dismissed!";
 	}; 
+
+	class TOUR_HVTConfirmed
+	{
+		name = "TOUR_HVTConfirmed";
+		sound[] = {};
+		title = "Target acquired!";
+	}; 
+
+	class TOUR_HVTConfirmedKIA
+	{
+		name = "TOUR_HVTConfirmedKIA";
+		sound[] = {};
+		title = "Damn! Target is KIA!";
+	}; 
+
+	class TOUR_HVTNotConfirmed
+	{
+		name = "TOUR_HVTNotConfirmed";
+		sound[] = {};
+		title = "This is not the HVT!";
+	}; 
 };
 
 class CfgSounds
